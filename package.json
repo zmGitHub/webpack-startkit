@@ -1,0 +1,89 @@
+{
+  "name": "webpack-seed",
+  "version": "1.0.0",
+  "description": "webpack react startkit",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "better-npm-run dev",
+    "prod": "better-npm-run prod"
+  },
+  "betterScripts": {
+    "dev": {
+      "command": "webpack-dashboard -c magenta -- nodemon --exec babel-node bin/ --ignore dist --ignore src",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "app:*"
+      }
+    },
+    "prod": {
+      "command": "npm run clean && babel-node bin/build",
+      "env": {
+        "NODE_ENV": "production",
+        "DEBUG": "app:*"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zmGitHub/turbo-admin.git"
+  },
+  "author": "turbo <691209942@qq.com> (https://github.com/zmGitHub)",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-react-optimize": "^1.0.1",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "babel-runtime": "^6.11.6",
+    "better-npm-run": "0.0.11",
+    "css-loader": "^0.25.0",
+    "cssnano": "^3.7.7",
+    "debug": "^2.2.0",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "fs-extra": "^0.30.0",
+    "html-webpack-plugin": "^2.22.0",
+    "imports-loader": "^0.6.5",
+    "ip": "^1.1.3",
+    "json-loader": "^0.5.4",
+    "koa": "^2.0.0",
+    "koa-connect-history-api-fallback": "^0.3.1",
+    "koa-convert": "^1.2.0",
+    "koa-proxy": "^0.6.0",
+    "koa-static": "^2.0.0",
+    "koa-webpack-dev-middleware": "^1.2.2",
+    "koa-webpack-hot-middleware": "^1.0.3",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "node-sass": "^3.10.1",
+    "nodemon": "^1.11.0",
+    "postcss-loader": "^0.13.0",
+    "resolve-url-loader": "^1.6.0",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dashboard": "^0.2.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "eventsource-polyfill": "^0.9.6",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb",
+  "installedESLint": true,
+  "plugins": [
+    "babel", "react", "import"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": 0 // 关闭显示 react 不在依赖的问题
+  }
+}
